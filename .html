@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nanok Bar | Valby</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+body {margin:0; font-family:Montserrat; background:#0a0a0a; color:white; scroll-behavior:smooth;}
+header {height:100vh; background:url("https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat; display:flex; align-items:center; justify-content:center; text-align:center; position:relative;}
+header::after {content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7);}
+header div {position:relative; z-index:2; animation:fadeIn 2s ease;}
+header h1 {font-size:80px; letter-spacing:6px; margin:0; color:#f2b705; text-shadow:0 0 10px #f2b705;}
+header p {font-size:22px; margin-top:15px; color:white;}
+.button {display:inline-block; padding:12px 25px; background:#f2b705; color:#000; font-weight:600; border-radius:8px; text-decoration:none; transition:0.3s;}
+.button:hover {background:#c9a24a; transform:scale(1.05);}
+nav {background:#000; padding:15px; text-align:center; position:sticky; top:0; z-index:10;}
+nav a {color:white; margin:0 15px; text-decoration:none; font-weight:600; transition:0.3s;}
+nav a:hover {color:#f2b705;}
+section {max-width:1200px; margin:auto; padding:80px 20px; opacity:0; transform:translateY(40px); transition:all 1s ease;}
+section.visible {opacity:1; transform:translateY(0);}
+h2 {color:#f2b705; margin-bottom:25px; text-shadow:0 0 5px #f2b705;}
+.menu, .gallery, .events, .instagram {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;}
+.card, .event, .insta-post {background:#1b1b1b; padding:25px; border-radius:12px; transition:0.3s; cursor:pointer;}
+.card:hover, .event:hover, .insta-post:hover {transform:scale(1.05); box-shadow:0 0 20px rgba(242,183,5,0.7);}
+.gallery img, .insta-post img {width:100%; border-radius:12px; transition:0.3s;}
+.gallery img:hover, .insta-post img:hover {transform:scale(1.05); filter:brightness(1.1);}
+iframe {border:0; border-radius:12px;}
+footer {background:#000; padding:40px; text-align:center; margin-top:60px; color:#aaa;}
+@keyframes fadeIn {from{opacity:0;} to{opacity:1;}}
+@media(max-width:600px){header h1{font-size:50px;} header p{font-size:18px;}}
+</style>
+</head>
+<body>
+
+<header>
+<div>
+<h1>NANOK BAR</h1>
+<p>Drinks • Musik • Stemning • Valby</p>
+<a href="#drinks" class="button">Se Menu</a>
+</div>
+</header>
+
+<nav>
+<a href="#about">Om os</a>
+<a href="#drinks">Drinks</a>
+<a href="#gallery">Galleri</a>
+<a href="#events">Events</a>
+<a href="#instagram">Instagram</a>
+<a href="#visit">Besøg os</a>
+<a href="#contact">Kontakt</a>
+</nav>
+
+<section id="about">
+<h2>Velkommen til Nanok Bar</h2>
+<p>Nanok Bar på Valby Langgade er stedet, hvor gode drinks, hyggelig atmosfære og god musik mødes. Her kan du mødes med venner, kollegaer eller nye bekendtskaber og nyde en afslappet aften i Valby.</p>
+<p>Vores bartendere laver både klassiske cocktails og Nanok-specials. Stemningen er inspireret af moderne cocktailbarer med dæmpet lys, lounge musik og nordisk stil.</p>
+</section>
+
+<section id="drinks">
+<h2>Drinks & Menu</h2>
+<div class="menu">
+<div class="card" title="Klassiske Cocktails"><h3>Klassiske Cocktails</h3><p>Mojito<br>Margarita<br>Espresso Martini<br>Negroni<br>Whiskey Sour</p></div>
+<div class="card" title="Nanok Specials"><h3>Nanok Specials</h3><p>Nanok Polar<br>Arctic Mule<br>Frozen Valby<br>Nanok Spritz</p></div>
+<div class="card" title="Øl"><h3>Øl</h3><p>Fadøl<br>Specialøl<br>Lokale bryggerier</p></div>
+<div class="card" title="Vin & Spiritus"><h3>Vin & Spiritus</h3><p>Rødvin<br>Hvidvin<br>Gin<br>Rom<br>Whisky</p></div>
+</div>
+</section>
+
+<section id="gallery">
+<h2>Galleri</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1525268323446-0505b6fe7778?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1514361892635-cebbf7e0b1c1?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80">
+</div>
+</section>
+
+<section id="events">
+<h2>Events & Nights</h2>
+<div class="events">
+<div class="event"><h3>DJ Night</h3><p>Hver fredag spiller vores DJ house og lounge musik. Perfekt start på weekenden.</p></div>
+<div class="event"><h3>Cocktail Night</h3><p>Specielle priser på cocktails hver torsdag aften.</p></div>
+<div class="event"><h3>Weekend Party</h3><p>Lørdag er der fuld stemning med musik og dansegulv.</p></div>
+</div>
+</section>
+
+<section id="instagram">
+<h2>Instagram</h2>
+<div class="instagram">
+<div class="insta-post"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80"></div>
+<div class="insta-post"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"></div>
+<div class="insta-post"><img src="https://images.unsplash.com/photo-1514361892635-cebbf7e0b1c1?auto=format&fit=crop&w=400&q=80"></div>
+<div class="insta-post"><img src="https://images.unsplash.com/photo-1525268323446-0505b6fe7778?auto=format&fit=crop&w=400&q=80"></div>
+</div>
+</section>
+
+<section id="visit">
+<h2>Besøg Nanok Bar</h2>
+<p>Nanok Bar<br>Valby Langgade<br>2500 Valby<br>Danmark</p>
+<p>Mandag – Torsdag: 16:00 – 01:00<br>Fredag – Lørdag: 16:00 – 03:00<br>Søndag: Lukket</p>
+<div class="map">
+<iframe src="https://maps.google.com/maps?q=valby%20langgade&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="350"></iframe>
+</div>
+</section>
+
+<section id="contact">
+<h2>Kontakt</h2>
+<p>Telefon: +45 00 00 00 00<br>Email: kontakt@nanokbar.dk</p>
+<p>Følg os på sociale medier for events, nye cocktails og kommende arrangementer.</p>
+<a href="#drinks" class="button">Se vores menu</a>
+</section>
+
+<footer>
+<p>© 2026 Nanok Bar – Valby Langgade</p>
+<p>Instagram • Facebook</p>
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY + window.innerHeight*0.8;
+  sections.forEach(sec=>{
+    if(sec.offsetTop < scrollY) sec.classList.add("visible");
+  });
+});
+</script>
+
+</body>
+</html>
